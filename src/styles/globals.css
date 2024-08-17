@@ -72,20 +72,29 @@
       --chart-4: 280 65% 60%;
       --chart-5: 340 75% 55%;
     }
-  }
+}
   
-  @layer base {
+@layer base {
     * {
-      @apply border-border;
+        @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+        @apply bg-background text-foreground;
     }
-  }
+}
 
+.no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+  
 :focus{
     outline: transparent;
-    box-shadow: 0 0 0 2px var(--blue-300) !important;
 }
 
 *{

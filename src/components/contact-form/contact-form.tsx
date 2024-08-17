@@ -30,9 +30,9 @@ export const ContactForm = () => {
               control={form.control}
               name="fullName"
               render={({ field }) => (
-                <FormItem>
+                <FormItem >
                   <FormControl>
-                    <Input placeholder="Nome" {...field} />
+                    <Input placeholder="Nome" {...field}/>
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -1,7 +1,155 @@
-import Image from 'next/image'
+"use client";
+
+import Image from "next/image";
+import { Tabs } from "./ui/tabs";
 import styles from './Services.module.css';
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+  } from "@/components/ui/accordion"  
 
 export function Services(){
+    
+    const tabs = [
+        {
+        title: "Digital",
+        value: "digital",
+        content: (
+                <div className="w-full overflow-hidden relative rounded-2xl px-10 py-20 md:text-4xl font-bold text-white bg-gradient-to-br from-blue-700 to-blue-500">
+                    <p className="text-xl pb-2">Digital Product Design</p>
+                    <p className="font-normal text-base pb-10">Na Neeo transformamos ideias inovadoras em produtos digitais impactantes. Nosso serviço de Digital Product Design combina criatividade, tecnologia e uma abordagem centrada no usuário para criar soluções digitais que não apenas atendem, mas superam as expectativas dos nossos clientes.</p>
+                    <main className="flex flex-row w-full">
+                        <Image 
+                            src="/cover_img.jpg" 
+                            alt=""
+                            width="300"
+                            height="500"
+                            className="rounded-2xl object-cover pr-8"
+                        />
+                        <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger className="text-lg font-semibold">Discovery</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Identificamos as necessidades do mercado e do usuário para garantir que cada projeto seja relevante e alinhado com as demandas do público-alvo.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-2">
+                                <AccordionTrigger className="text-lg font-semibold">Design UX/UI</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Focamos na criação de interfaces intuitivas e acessíveis, proporcionando uma experiência de uso fluida e envolvente, com visuais atraentes que reforçam a identidade da marca.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-3">
+                                <AccordionTrigger className="text-lg font-semibold">Prototipagem e Testes</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Criamos protótipos funcionais para validar ideias e refinamos o design com base no feedback real do cliente e seus usuários.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-4">
+                                <AccordionTrigger className="text-lg font-semibold">Colaboração Iterativa</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Trabalhamos em estreita colaboração com nossos clientes em todas as etapas do processo, garantindo transparência e alinhamento contínuo.
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </main>
+                </div>
+        ),
+        },
+        {
+        title: "Develop",
+        value: "develop",
+        content: (
+            <div className="w-full overflow-hidden relative rounded-2xl px-10 py-20 text-xl md:text-4xl font-bold text-white bg-gradient-to-br  from-blue-700 to-blue-500">
+            <p className="text-xl pb-2">Develop & Delivery</p>
+            <p className="font-normal text-base pb-10">transformamos ideias inovadoras em produtos digitais impactantes. Nosso serviço de Digital Product Design combina criatividade, tecnologia e uma abordagem centrada no usuário para criar soluções digitais que não apenas atendem, mas superam as expectativas dos nossos clientes.</p>
+            <main className="flex flex-row w-full">
+                        <Image 
+                            src="/cover_img.jpg" 
+                            alt=""
+                            width="300"
+                            height="500"
+                            className="rounded-2xl object-cover pr-8"
+                        />
+                        <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger className="text-lg font-semibold">Discovery</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Identificamos as necessidades do mercado e do usuário para garantir que cada projeto seja relevante e alinhado com as demandas do público-alvo.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-2">
+                                <AccordionTrigger className="text-lg font-semibold">Design UX/UI</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Focamos na criação de interfaces intuitivas e acessíveis, proporcionando uma experiência de uso fluida e envolvente, com visuais atraentes que reforçam a identidade da marca.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-3">
+                                <AccordionTrigger className="text-lg font-semibold">Prototipagem e Testes</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Criamos protótipos funcionais para validar ideias e refinamos o design com base no feedback real do cliente e seus usuários.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-4">
+                                <AccordionTrigger className="text-lg font-semibold">Colaboração Iterativa</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Trabalhamos em estreita colaboração com nossos clientes em todas as etapas do processo, garantindo transparência e alinhamento contínuo.
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </main>
+            </div>
+        ),
+        },
+        {
+        title: "Consulting",
+        value: "consulting",
+        content: (
+            <div className="w-full overflow-hidden relative rounded-2xl px-10 py-20 text-xl md:text-4xl font-bold text-white bg-gradient-to-br  from-blue-700 to-blue-500">
+            <p className="text-xl pb-2">Consulting Services</p>
+            <p className="font-normal text-base pb-10">transformamos ideias inovadoras em produtos digitais impactantes. Nosso serviço de Digital Product Design combina criatividade, tecnologia e uma abordagem centrada no usuário para criar soluções digitais que não apenas atendem, mas superam as expectativas dos nossos clientes.</p>
+            <main className="flex flex-row w-full">
+                        <Image 
+                            src="/cover_img.jpg" 
+                            alt=""
+                            width="300"
+                            height="500"
+                            className="rounded-2xl object-cover pr-8"
+                        />
+                        <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger className="text-lg font-semibold">Discovery</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Identificamos as necessidades do mercado e do usuário para garantir que cada projeto seja relevante e alinhado com as demandas do público-alvo.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-2">
+                                <AccordionTrigger className="text-lg font-semibold">Design UX/UI</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Focamos na criação de interfaces intuitivas e acessíveis, proporcionando uma experiência de uso fluida e envolvente, com visuais atraentes que reforçam a identidade da marca.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-3">
+                                <AccordionTrigger className="text-lg font-semibold">Prototipagem e Testes</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Criamos protótipos funcionais para validar ideias e refinamos o design com base no feedback real do cliente e seus usuários.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-4">
+                                <AccordionTrigger className="text-lg font-semibold">Colaboração Iterativa</AccordionTrigger>
+                                <AccordionContent className="font-normal">
+                                Trabalhamos em estreita colaboração com nossos clientes em todas as etapas do processo, garantindo transparência e alinhamento contínuo.
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </main>
+            </div>
+        ),
+        },
+    ];
+
     return(
         <>
             <section id='Serviços' className={styles.services}>
@@ -10,26 +158,8 @@ export function Services(){
                     <p>Oferecemos um conjunto diferenciado de serviços e soluções personalizadas para entregar cada vez mais resultados e ajudar sua empresa a alcançar seus objetivos.</p>
                     
                     <div className={styles.content}>
-                        <div className={styles.collumn}>
-                            <div className={styles.imagem}>
-                                <Image src='/Project.svg' alt="Projeto" width={100} height={100} />
-                            </div>
-                            <h3>Digital Product Design</h3>
-                            <p>Construímos a estratégia para o desenvolvimento do seu produto digital, unindo a visão do negócio e a experiência do usuário final. Neste processo traçamos o planejamento, incluindo as etapas de Discovery, elaboração do Product Briefing, Design UX/UI e Roadmap do Produto, contemplando suas respectivas fases (MVPs) e estimativas macro, que consideram a priorização das funcionalidade com objetivo de potencializar o valor entregue.</p>
-                        </div>
-                        <div className={styles.collumn}>
-                            <div className={styles.imagem}>
-                                <Image src='/OKR.svg'  alt="OKR" width={100} height={100} />
-                            </div>
-                            <h3>Develop & Delivery</h3>
-                            <p>Partindo da visão de produto, definimos a estrutura, arquitetura e stacks de tecnologia para propor a solução ideal. Montamos squads multidisciplinares e especializados para garantir a eficiência nas etapas do fluxo de desenvolvimento, entregando software funcional de forma continua, ágil e incremental. A performance dos ciclos de entregas são medidas através das métricas de desenvolvimento, melhorando a cada sprint, com reports quinzenais demonstrando a evolução do seu produto.</p>
-                        </div>
-                        <div className={styles.collumn}>
-                            <div className={styles.imagem}>
-                                <Image src='/Agile.svg' alt="Agile" width={100} height={100} />
-                            </div>
-                            <h3>Consulting Services</h3>
-                            <p>Realizamos o diagnóstico para entender os cenários, possíveis gaps e oportunidades de evolução com foco em processos, métricas e cultura ágil para desenvolvimento de produtos e projetos. Ao identificar os principais entraves, elencamos as principais ações e soluções e apoiamos o seu time para promovermos juntos as evoluções necessárias. Um ciclo de melhoria continua se estabelece para acompanhamento do plano de ação e suporte para garantir o sucesso.</p>
+                        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start ">
+                            <Tabs tabs={tabs} />
                         </div>
                     </div>
                 </div>

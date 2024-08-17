@@ -1,7 +1,7 @@
 .services{
-    background-image: url('../../public/whitebg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgb(37,99,235);
+    background: linear-gradient(0deg, rgba(37,99,235,0.24693627450980393) 0%, rgba(255,255,255,0.5018382352941176) 50%);
+    border-top: solid 1px var(--gray-100)
 }
 
 .container{
@@ -11,6 +11,10 @@
     flex-direction: column;
     align-items: center;
     padding: 6rem 0;
+}
+
+.content{
+    width: 100%;
 }
 
 .container h1{
@@ -34,53 +38,6 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
-.content .collumn{
-    width: 32%;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    border-radius: 16px;
-    background: radial-gradient(100% 100% at 100% 100%, rgba(255, 255, 255, 0.973) 0%, rgba(255, 255, 255, 0.5) 100%);;
-    padding: 2rem 0;
-    box-shadow: rgba(17, 8, 50, 0.29) 0px 0.48175px 1px -1px, rgba(17, 8, 50, 0.255) 0px 1px 2px -1px, rgba(17, 8, 50, 0.1) 0px 2px 5px -1px;
-    position: relative;
-}
-
-.content .collumn .imagem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    opacity: 0.2;
-    z-index: 0;
-}
-
-.content .collumn .imagem > img{
-    width: 10rem;
-    
-}
-
-.content .collumn h3{
-    font-size: 1.5rem;
-    padding: 0.5rem 1.2rem;
-    color: var(--gray-900);
-    text-align: start;
-}
-
-.content .collumn p{
-    color: var(--gray-600);
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: start;
-    line-height: 1.5;
-    padding: 0.5rem 1.2rem;
-}
-
 
 @media screen and (max-width: 1200px){
     .container{
