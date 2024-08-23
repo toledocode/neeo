@@ -1,10 +1,11 @@
 .contact {
-    background-image: url('../../public/whitebg2.jpg');
+    background: rgb(37,99,235);
+    background: linear-gradient(180deg, rgba(37,99,235,0.25) 0%, rgba(255,255,255,0.50) 50%);
+    border-top: solid 1px var(--gray-100);
+
+    background-image: url('../../public/bgcontact.png');
     background-repeat: no-repeat;
     background-size: cover;
-
-    color: var(--gray-900);
-    padding: 6rem 0;
 }
 
 .container {
@@ -15,90 +16,7 @@
     max-width: var(--max-width);
     margin: auto;
     width: 100%;
-}
-
-.container > h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.container p {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.containerLoader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
-
-.containerLoader form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    max-width: 28rem;
-    width: 100%;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
-}
-
-.errorMsg{
-    width: 100%;    
-    text-align: left;
-    margin-top: -0.8rem;
-    color: var(--red-500);
-    font-size: 0.9rem;
-}
-
-.containerLoader form input{
-    width: 100%;
-    resize: none;
-    border-radius: 4px;
-    height: 2.2rem;
-    padding: 0.8rem;
-    line-height: 1.2;
-    border: solid 1px var(--white);
-    background: #ffffffad;
-    box-shadow: rgba(17, 8, 50, 0.29) 0px 0.48175px 1px -1px, rgba(17, 8, 50, 0.255) 0px 1px 2px -1px, rgba(17, 8, 50, 0.1) 0px 2px 5px -1px;
-
-}
-
-.containerLoader form textarea{
-    width: 100%;
-    resize: none;
-    border-radius: 4px;
-    height: 8rem;
-    padding: 0.8rem;
-    line-height: 1.2;
-    border: solid 1px var(--white);
-    background: #ffffffad;
-    box-shadow: rgba(17, 8, 50, 0.29) 0px 0.48175px 1px -1px, rgba(17, 8, 50, 0.255) 0px 1px 2px -1px, rgba(17, 8, 50, 0.1) 0px 2px 5px -1px;
-
-}
-
-.formButton{
-    width: 100%;
-    background: var(--blue-300);
-    color: var(--white);
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    border: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(17, 8, 50, 0.29) 0px 0.48175px 1px -1px, rgba(17, 8, 50, 0.255) 0px 1px 2px -1px, rgba(17, 8, 50, 0.1) 0px 2px 5px -1px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-.formButton:hover{
-    background: #143176;
+    padding: 8rem 0;
 }
 
 @media screen and (max-width: 1200px){

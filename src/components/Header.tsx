@@ -35,7 +35,7 @@ export function Header(){
         <header className={`${styles.header} ${scrolled ? styles.scrolled : "" }`}>
             <div className={styles.container}>
 
-                <a href="#Home" className={styles.logo}>
+                <a href="./#Home" className={styles.logo}>
                     <svg viewBox="0 0 521 120" xmlns="http://www.w3.org/2000/svg">
                         <path d="M93.429 59.6904L61.9214 27.9725H88.9113L120.419 59.6904L59.9664 119.933L46.5246 106.491L93.429 59.6904ZM27.8965 59.1662L59.508 91.0638H31.0519L0 59.7942L60.9388 0L74.2287 13.2898L27.8965 59.1662Z" />
                         <path d="M142.35 98.7614V13.36H179.54C187.262 13.36 194.079 14.9663 199.989 18.1791C205.901 21.3918 210.454 25.8994 213.646 31.7019C216.84 37.5044 218.438 44.086 218.438 51.4467V98.7614H196.806V50.4541C196.806 46.799 196.016 43.6209 194.436 40.9197C192.857 38.2185 190.743 36.1504 188.092 34.7154C185.442 33.2787 182.54 32.5317 179.388 32.4743H163.982V98.7614H142.35Z" />
@@ -47,8 +47,8 @@ export function Header(){
                 <nav className={`${styles.menu} ${ showMenu ? styles.show : "" }`}>
                     <a href="./#Home">Home</a>
                     <a href="./#Serviços">Serviços</a>
-                    <a href="./#Contato">Contato</a>
                     <a href="/Carreira">Carreira</a>
+                    <a href="./#Contato" className={styles.contact}>Contato</a>
                 </nav>
                 <div 
                     className={styles.menuButton}

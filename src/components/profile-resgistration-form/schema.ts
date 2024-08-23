@@ -67,19 +67,10 @@ export const registrationSchema = z.object({
   .string({
     required_error: "Este campo é obrigatório",
   }),
-  availability: z
-  .string({
-    required_error: "Este campo é obrigatório",
-  }),
-  availabilityTimes: z
-  .string({
-    required_error: "Este campo é obrigatório",
-  })
-  .min(5, {
-    message: "A mensagem deve ter no mínimo 5 caracteres",
-  })
-  .max(500, {
-    message: "Ops! Mensagem muito longa, tente algo mais objetivo (no máximo 500 caracteres).",
+  items: z
+  .array(z.string())
+  .refine((value) => value.some((item) => item), {
+    message: "Você precisa selecionar pelo menos 1 item.",
   }),
   rateValue: z
   .string({

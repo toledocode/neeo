@@ -14,10 +14,10 @@ export function Footer(){
                     </svg>
                 </a>
                 <nav className={styles.menu}>
-                    <a href="#Home">Home</a>
-                    <a href="#Serviços">Serviços</a>
-                    <a href="#Contato">Contato</a>
-                    <a href="#">Carreira</a>
+                    <a href="./#Home">Home</a>
+                    <a href="./#Serviços">Serviços</a>
+                    <a href="/Carreira">Carreira</a>
+                    <a href="./#Contato">Contato</a>
                 </nav>
                 <p>Copyright © 2024 Neeo. All rights reserved.</p>
             </div>

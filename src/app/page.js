@@ -1,10 +1,8 @@
 import Image from 'next/image'
-import { About } from "@/components/Hero";
+import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
-import { Cta } from "@/components/Cta";
 import { Career } from "@/components/Career";
 import { Contact } from "@/components/Contact";
-import { CareerRegistration } from '@/components/Career-registration';
 
 export default function Home() {
   return (
@@ -17,9 +15,8 @@ export default function Home() {
               <Image src='/Whatsapp.svg' alt="Whatsapp" width={40} height={40} />
           </a>
         </div>
-        <About />
+        <Hero />
         <Services />
-        <Cta />
         <Career />
         <Contact />
       </main>

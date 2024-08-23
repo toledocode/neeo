@@ -31,19 +31,22 @@
       --chart-5: 27 87% 67%;
       --white: #fff;
       --gray-100: #eaeaea;
-      --gray-300: #d4d4d4;
+      --gray-300: #D4D8E3;
       --gray-400: #7b7b7b;
       --gray-600: #3b3b3b;
+      --gray-700: #646464;
       --gray-800: #202024;
       --gray-900: #121214;
-      --blue-100:#F8F8FE;
+      --blue-100: #F8F8FE;
+      --blue-200: #4C7EEE;
       --blue-300: #2563eb;
       --blue-500: #143176;
       --red-500: #f75a68;
       --pink-300: #F17FB8;
       --pink-500: #EB4899;
+      --purple-100: #9FB8EE;
       --purple-300: #7213EB;
-      --max-width: 1100px;
+      --max-width: 1232px;
     }
 
     .dark {

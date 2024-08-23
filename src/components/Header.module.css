@@ -30,12 +30,13 @@
 
 .scrolled .menu a{
     color: var(--pink-500);
-    font-weight: bold;
+    font-weight: 600;
     transition: 0.5s;
 }
 
 .scrolled .menu a:hover{
     background: var(--white);
+    border: 1px solid var(--pink-300);
     color: var(--pink-500);
     font-weight: 600;
 }
@@ -140,7 +141,7 @@
         align-items: center;
         flex-direction: column;
         
-        width: 40%;
+        width: 50%;
         height: auto;
         position: absolute;
         top: 100%;
@@ -150,7 +151,7 @@
     }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 520px){
     .show {
         width: 100%;
     }
