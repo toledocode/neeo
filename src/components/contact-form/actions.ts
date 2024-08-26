@@ -10,7 +10,5 @@ export const sendEmail = async (data: ContactSchema) => {
   const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
   const userId = process.env.NEXT_PUBLIC_USER_ID;
 
-  console.log(data);
-
   await emailjs.send(`${serviceId}`, `${templateId}`, data, `${userId}`);
 };

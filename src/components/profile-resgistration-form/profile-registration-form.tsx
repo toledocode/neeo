@@ -304,7 +304,7 @@ export const ProfileRegistrationForm = () => {
                 <FormField
                   control={form.control}
                   name="rateValue"
-                  render={({ field: { value, ...field } }) => (
+                  render={({ field }) => (
                     <FormItem className="pb-2">
                       <FormLabel>Minha expectativa de valor/hora é:</FormLabel>
                       <FormControl>
@@ -318,20 +318,25 @@ export const ProfileRegistrationForm = () => {
                     </FormItem>
                   )}
                 />
-
-                <FormItem className="pb-2">
-                <FormLabel>Quer deixar uma mensagem pra gente?</FormLabel>
-                <FormControl>
-                  <textarea 
-                    placeholder="Deixe aqui a sua mensagem..." 
-                    className=" flex min-h-[80px] w-full rounded-md px-3 py-2 shadow-md placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 bg-gray-700 text-white font-semibold"
-                  />
-                </FormControl>
-                <FormMessage />
-                </FormItem>
-
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                  <FormItem className="pb-2">
+                  <FormLabel>Quer deixar uma mensagem pra gente (opcional)?</FormLabel>
+                  <FormControl>
+                    <textarea
+                      placeholder="Escreva aqui a sua mensagem..."
+                      {...field} 
+                      className=" flex min-h-[80px] w-full rounded-md px-3 py-2 shadow-md placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 bg-gray-700 text-white font-semibold"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                  </FormItem>
+                  )}
+                />
                 <Button 
-                  type="submit" 
+                  type="submit"
                   className="w-full bg-[--pink-500] h-[2rem] text-white text-base hover:bg-[--blue-300] mt-6" 
                   disabled={isSubmitting}
                 >
@@ -340,7 +345,6 @@ export const ProfileRegistrationForm = () => {
               </TabsContent>
             </Tabs>
           </form>
-          
         </Form>
       </CardContent>
     </Card>

@@ -1,16 +1,39 @@
-"use client";
+"use server";
 
-import { ContactSchema } from "@/components/contact-form/schema";
+import { RegistrationSchema } from "./schema";
+import { PrismaClient } from "@prisma/client";
 
-import emailjs from "@emailjs/browser";
+const prisma = new PrismaClient();
 
-export const sendEmail = async (data: ContactSchema) => {
+export async function createAccount (data: RegistrationSchema) {
 
-  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
-  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-  const userId = process.env.NEXT_PUBLIC_USER_ID;
+  const fullName = data.fullName as string;
+  const email = data.email as string;
+  const phone = data.phone as string;
+  const city = data.city as string;
+  const linkedin = data.linkedin as string;
+  const lookingFor = data.lookingFor as string;
+  const professionalArea = data.professionalArea as string;
+  const skills = data.skills as string;
+  const level = data.level as string;
+  const items = data.items as string[];
+  const rateValue = data.rateValue as string;
+  const message = data.message as string;
 
-  console.log(data);
-
-  await emailjs.send(`${serviceId}`, `${templateId}`, data, `${userId}`);
-};
+  await prisma.user.create({
+    data: {
+      fullName,
+      email,
+      phone,
+      city,
+      linkedin,
+      lookingFor,
+      professionalArea,
+      skills,
+      level,
+      items,
+      rateValue,
+      message,
+    },
+  });
+}

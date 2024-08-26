@@ -79,6 +79,11 @@ export const registrationSchema = z.object({
   .min(2, {
     message: "O valor hora deve ter no mínimo 2 caracteres",
   }),
+  message: z
+  .string()
+  .min(4, "Please enter a valid value")
+  .optional()
+  .or(z.literal('')),
 });
 
 export type RegistrationSchema = z.infer<typeof registrationSchema>;
