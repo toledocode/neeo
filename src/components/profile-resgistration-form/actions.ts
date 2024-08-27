@@ -1,12 +1,12 @@
 "use server";
 
-import { RegistrationSchema } from "./schema";
 import { PrismaClient } from "@prisma/client";
+
+import { RegistrationSchema } from "./schema";
 
 const prisma = new PrismaClient();
 
-export async function createAccount (data: RegistrationSchema) {
-
+export async function createAccount(data: RegistrationSchema) {
   const fullName = data.fullName as string;
   const email = data.email as string;
   const phone = data.phone as string;

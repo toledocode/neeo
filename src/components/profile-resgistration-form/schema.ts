@@ -39,20 +39,15 @@ export const registrationSchema = z.object({
     .string({
       required_error: "O perfil do linkedIn é obrigatório",
     })
-    .min(12, {
-      message: "O link ter no mínimo 12 caracteres",
-    })
-    .max(255, {
-      message: "O nome deve ter no máximo 255 caracteres",
+    .url({
+      message: "O link do linkedIn é inválido",
     }),
-  lookingFor: z
-    .string({
-      required_error: "Este campo é obrigatório",
-    }),
-  professionalArea: z
-    .string({
-      required_error: "Este campo é obrigatório",
-    }),
+  lookingFor: z.string({
+    required_error: "Este campo é obrigatório",
+  }),
+  professionalArea: z.string({
+    required_error: "Este campo é obrigatório",
+  }),
   skills: z
     .string({
       required_error: "Este campo é obrigatório",
@@ -61,29 +56,27 @@ export const registrationSchema = z.object({
       message: "A mensagem deve ter no mínimo 2 caracteres",
     })
     .max(500, {
-      message: "Ops! Texto muito longo, tente algo mais objetivo (no máximo 500 caracteres).",
+      message:
+        "Ops! Texto muito longo, tente algo mais objetivo (no máximo 500 caracteres).",
     }),
-  level: z
-  .string({
+  level: z.string({
     required_error: "Este campo é obrigatório",
   }),
-  items: z
-  .array(z.string())
-  .refine((value) => value.some((item) => item), {
+  items: z.array(z.string()).refine((value) => value.some((item) => item), {
     message: "Você precisa selecionar pelo menos 1 item.",
   }),
   rateValue: z
-  .string({
-    required_error: "Este campo é obrigatório",
-  })
-  .min(2, {
-    message: "O valor hora deve ter no mínimo 2 caracteres",
-  }),
+    .string({
+      required_error: "Este campo é obrigatório",
+    })
+    .min(2, {
+      message: "O valor hora deve ter no mínimo 2 caracteres",
+    }),
   message: z
-  .string()
-  .min(4, "Please enter a valid value")
-  .optional()
-  .or(z.literal('')),
+    .string()
+    .min(4, "Please enter a valid value")
+    .optional()
+    .or(z.literal("")),
 });
 
 export type RegistrationSchema = z.infer<typeof registrationSchema>;

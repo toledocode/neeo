@@ -1,11 +1,9 @@
-import { CareerRegistration } from '@/app/Carreira/Career-registration';
+import { CareerRegistration } from "./Career-registration";
 
 export default function Home() {
   return (
     <main>
-
       <CareerRegistration />
-
     </main>
   );
 }

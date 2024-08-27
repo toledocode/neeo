@@ -1,11 +1,7 @@
 import { useForm } from "react-hook-form";
 
 import { sendEmail } from "@/components/contact-form/actions";
-
-import {
-  contactSchema,
-  ContactSchema,
-} from "@/components/contact-form/schema";
+import { contactSchema, ContactSchema } from "@/components/contact-form/schema";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -21,7 +17,7 @@ export const useContactForm = () => {
       // await new Promise((resolve) => setTimeout(resolve, 2000));
       await sendEmail(data);
       toast.success("Mensagem enviada com sucesso!");
-      
+
       return;
     } catch {
       toast.error("Erro ao enviar mensagem", {
