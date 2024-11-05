@@ -1,6 +1,5 @@
 .header{
-    background: var(--blue-300);
-    background: linear-gradient(#2563eb, #2563eb, #2d6aec);
+    background: var(--gray-900);
     width: 100%;
     height: 4.6875rem;
     

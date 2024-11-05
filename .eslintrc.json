@@ -4,5 +4,11 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": true
+  },
+  "prettier/prettier": [
+  "error",
+  {
+    "endOfLine": "auto"
   }
+]
 }

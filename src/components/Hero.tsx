@@ -8,27 +8,27 @@ import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <>
       <section id="Home" className={styles.hero}>
         <div className={styles.container}>
           <FadeInStagger>
             <FadeIn>
               <div className="flex justify-center items-center flex-col text-[--gray-900] pb-20">
-                <p className="text-xl font-medium text-[--pink-500] text-center pb-4">
+                
+                <p className="text-lg sm:text-xl font-medium text-[--pink-500] text-center pb-4">
                   Somos especialistas
                 </p>
 
                 <div className="flex justify-center items-center pb-10">
-                  <p className="font-bold text-6xl text-center">
-                    Dê vida às suas ideias com{" "}
+                  <h1 className="font-bold text-4xl sm:text-6xl text-center dark: text-white">
+                    Transformamos ideias em {" "}
                     <span className="text-[--blue-300]">
-                      soluções que realmente impactam
+                      soluções digitais inovadoras
                     </span>
-                  </p>
+                  </h1>
                 </div>
 
-                <p className="text-xl font-medium text-[--gray-700] text-center pb-10 w-[785px]">
-                  Formamos squads experientes para criar soluções exclusivas que
+                <p className="text-base sm:text-xl font-medium text-[--gray-700] text-center pb-10 max-w-[785px] dark: text-gray-300">
+                  Montamos squads experientes para criar soluções exclusivas que
                   unem estratégia e design, transformando experiências e
                   desenvolvendo produtos digitais únicos.
                 </p>
@@ -55,6 +55,5 @@ export function Hero() {
           </FadeInStagger>
         </div>
       </section>
-    </>
   );
 }

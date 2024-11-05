@@ -57,6 +57,7 @@ export const ProfileRegistrationForm = () => {
       </p>
       <CardContent className="flex flex-col flex-center items-center gap-4 m-auto w-full">
         <ProgressBar step={steps} />
+
         <Form {...form}>
           <form onSubmit={onSubmit} className="space-y-6 w-full text-white">
             <Tabs value={steps}>
@@ -154,7 +155,10 @@ export const ProfileRegistrationForm = () => {
                     )}
                   />
 
-                  <Button className="w-full" onClick={() => setSteps("step2")}>
+                  <Button 
+                    className="w-full text-white" 
+                    onClick={() => setSteps("step2")}
+                  >
                     Próximo
                   </Button>
                 </Fragment>
@@ -215,16 +219,24 @@ export const ProfileRegistrationForm = () => {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="dados">Dados</SelectItem>
+                            <SelectItem value="dados">
+                              Dados
+                            </SelectItem>
                             <SelectItem value="desenvolvimento">
                               Desenvolvimento
                             </SelectItem>
-                            <SelectItem value="design">Design</SelectItem>
+                            <SelectItem value="design">
+                              Design
+                            </SelectItem>
                             <SelectItem value="infraestrutura">
                               Infraestrutura
                             </SelectItem>
-                            <SelectItem value="produto">Produto</SelectItem>
-                            <SelectItem value="qualidade">Qualidade</SelectItem>
+                            <SelectItem value="produto">
+                              Produto
+                            </SelectItem>
+                            <SelectItem value="qualidade">
+                              Qualidade
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -277,9 +289,15 @@ export const ProfileRegistrationForm = () => {
                             <SelectItem value="freelancer">
                               Aprendiz / Estágio
                             </SelectItem>
-                            <SelectItem value="efetivo">Junior</SelectItem>
-                            <SelectItem value="pleno">Pleno</SelectItem>
-                            <SelectItem value="sênior">Sênior</SelectItem>
+                            <SelectItem value="efetivo">
+                              Junior
+                            </SelectItem>
+                            <SelectItem value="pleno">
+                              Pleno
+                            </SelectItem>
+                            <SelectItem value="sênior">
+                              Sênior
+                            </SelectItem>
                             <SelectItem value="especialista">
                               Especialista
                             </SelectItem>
@@ -296,13 +314,13 @@ export const ProfileRegistrationForm = () => {
                   <div className="grid grid-cols-2 gap-3 dark">
                     <Button
                       variant="secondary"
-                      className="w-full"
+                      className="w-full text-white"
                       onClick={() => setSteps("step1")}
                     >
                       Voltar
                     </Button>
                     <Button
-                      className="w-full"
+                      className="w-full text-white"
                       onClick={() => setSteps("step3")}
                     >
                       Próximo
@@ -404,15 +422,20 @@ export const ProfileRegistrationForm = () => {
                     )}
                   />
 
-                  <div className="grid grid-cols-2 gap-3 dark">
+                  <div className="grid grid-cols-2 gap-3 dark text-white">
                     <Button
                       variant="secondary"
-                      className="w-full"
+                      
                       onClick={() => setSteps("step2")}
                     >
                       Voltar
                     </Button>
-                    <Button type="submit" disabled={isSubmitting}>
+                    
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="w-full  text-white"
+                    >
                       {isSubmitting ? "Processando..." : "Concluir"}
                     </Button>
                   </div>

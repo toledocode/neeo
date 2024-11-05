@@ -1,7 +1,6 @@
 .contact {
     background: rgb(37,99,235);
     background: linear-gradient(180deg, rgba(37,99,235,0.25) 0%, rgba(255,255,255,0.50) 50%);
-    border-top: solid 1px var(--gray-100);
 
     background-image: url('../../public/bgcontact.png');
     background-repeat: no-repeat;

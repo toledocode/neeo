@@ -1,28 +1,39 @@
 import { ContactForm } from "./contact-form";
 import styles from "./Contact.module.css";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 
 export function Contact() {
   return (
     <section id="Contato" className={styles.contact}>
       <div className={styles.container}>
-        <div className="flex justify-center items-center flex-col text-[--gray-900] pb-20">
-          <div className="flex justify-center items-center flex-col pb-10">
-            <p className="text-xl font-medium text-[--pink-500] text-center pb-4">
-              Entre em contato
-            </p>
-            <p className="font-bold text-5xl text-center">
+      <FadeInStagger>
+        <FadeIn>
+        <div className="flex justify-center items-center flex-col text-[--gray-900] pb-20 dark:text-white">
+                    
+          <p className="text-lg sm:text-xl font-medium text-[--pink-500] text-center pb-4">
+            Entre em contato
+          </p>
+
+          <div className="flex justify-center items-center pb-10">
+            <h1 className="font-bold text-4xl sm:text-6xl text-center">
               Sua solução está a um clique{" "}
               <span className="text-[--blue-300]">de distancia</span>
-            </p>
+            </h1>
           </div>
 
-          <p className="text-xl font-medium text-[--gray-700] text-center w-[785px]">
+          <p className="text-base sm:text-xl font-medium text-gray-400 text-center max-w-[785px]">
             Vamos conversar sobre os seus projetos, desafios em tecnologia e
             como podemos impulsionar o seu negócio?
           </p>
-        </div>
 
+        </div>
+        </FadeIn>
+
+        <FadeIn className="flex items-center justify-center">
         <ContactForm />
+        </FadeIn>
+
+      </FadeInStagger>  
       </div>
     </section>
   );

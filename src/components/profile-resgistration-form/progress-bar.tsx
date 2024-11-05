@@ -9,14 +9,14 @@ export const ProgressBar = ({ step = "step1" }: ProgressBarProps) => {
   const steps = [
     {
       id: "01",
-      name: "Title 1",
-      description: "Descrição do title 1",
+      name: "Passo 1",
+      description: "Seus dados pessoais",
       status: step === "step1" ? "current" : "complete",
     },
     {
       id: "02",
-      name: "Title 2",
-      description: "Descrição do title 2",
+      name: "Passo 2",
+      description: "Seus dados profissionais",
       status:
         step === "step1"
           ? "upcoming"
@@ -26,8 +26,8 @@ export const ProgressBar = ({ step = "step1" }: ProgressBarProps) => {
     },
     {
       id: "03",
-      name: "Title 3",
-      description: "Descrição do title 3",
+      name: "Passos 3",
+      description: "Disponibilidade e dados finais",
       status: ["step1", "step2"].includes(step) ? "upcoming" : "current",
     },
   ];
@@ -64,7 +64,7 @@ export const ProgressBar = ({ step = "step1" }: ProgressBarProps) => {
                       )}
                     >
                       <span className="flex-shrink-0">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[--blue-300]">
                           <CheckIcon
                             aria-hidden="true"
                             className="h-6 w-6 text-white"
@@ -83,7 +83,7 @@ export const ProgressBar = ({ step = "step1" }: ProgressBarProps) => {
                   <div aria-current="step">
                     <span
                       aria-hidden="true"
-                      className="absolute left-0 top-0 h-full w-1 bg-indigo-600 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+                      className="absolute left-0 top-0 h-full w-1 bg-[--blue-300] lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
                     />
                     <span
                       className={cn(
@@ -92,12 +92,12 @@ export const ProgressBar = ({ step = "step1" }: ProgressBarProps) => {
                       )}
                     >
                       <span className="flex-shrink-0">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-indigo-600">
-                          <span className="text-indigo-600">{step.id}</span>
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[--blue-300]">
+                          <span className="text-[--blue-300]">{step.id}</span>
                         </span>
                       </span>
                       <span className="ml-4 mt-0.5 flex min-w-0 flex-col">
-                        <span className="text-sm font-medium text-indigo-600">
+                        <span className="text-sm font-medium text-[--blue-300]">
                           {step.name}
                         </span>
                         <span className="text-sm font-medium text-gray-500">
